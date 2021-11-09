@@ -21,18 +21,9 @@ const scene = new THREE.Scene();
  */
 const gltfLoader = new GLTFLoader();
 
-gltfLoader.load(
-  '/models/FlightHelmet/glTF/FlightHelmet.gltf',
-  (gltf) => {
-    scene.add(gltf.scene.children[0]);
-  },
-  () => {
-    console.log('progress');
-  },
-  () => {
-    console.log('error');
-  }
-);
+gltfLoader.load('/models/FlightHelmet/glTF/FlightHelmet.gltf', (gltf) => {
+  scene.add(gltf.scene.children[0]);
+});
 
 /**
  * Floor
